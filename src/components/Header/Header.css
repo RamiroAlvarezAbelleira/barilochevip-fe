@@ -1,0 +1,29 @@
+.header {
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.header-container {
+    width: 60vw !important;
+    position: absolute;
+    left: 20vw;
+}
+
+.right-links-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.user-dropdown {
+    width: fit-content;
+}
+
+.cart-total-items-badge {
+    position: absolute;
+    top: 0;
+    right: 35px;
+}
+
+.inactive-link-color {
+    color: gray;
+}

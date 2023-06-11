@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import './theme/variables.css'
 import {ContentWrapper} from './components/ContentWrapper';
 import {Home} from './pages/Home';
 
