@@ -1,12 +1,25 @@
 .header {
     position: relative;
-    background-color: var(--primary-color);
+    background-color: black;
+}
+
+.home-logo {
+    margin: 0 0 0 15px;
+    border-radius: 1rem;
 }
 
 .header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.nav-container {
     width: 60vw !important;
     position: absolute;
     left: 20vw;
+    height: 100%;
 }
 
 .right-links-container {
@@ -14,8 +27,13 @@
     justify-content: flex-end;
     position: relative;
 }
-.user-dropdown {
+.rent-dropdown {
     width: fit-content;
+    font-size: 1.25rem;
+}
+
+.rent-dropdown > a {
+    color: rgb(200, 200, 200) !important;
 }
 
 .cart-total-items-badge {
@@ -24,6 +42,16 @@
     right: 35px;
 }
 
-.inactive-link-color {
-    color: gray;
+.inactive-link {
+    color: rgb(200, 200, 200);
+    font-size: 1.25rem;
+    transition: all 0.3s;
+}
+
+.active-link {
+    font-size: 1.20rem;
+}
+
+.inactive-link:hover {
+    color: white;
 }

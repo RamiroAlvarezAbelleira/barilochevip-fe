@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Navbar, Nav, Container, Form, Button, Dropdown, DropdownButton, Row, Col, Badge } from 'react-bootstrap'
+import { Navbar, Nav, Container, Form, Button, Dropdown, DropdownButton, Row, Col, Badge, NavDropdown } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import image from "../../assests/images/Bvip-LOGO.png";
@@ -16,17 +16,17 @@ const Header = () => {
 
     /* active and inactive link styles*/
 
-    let active = 'col-md-4 col-xl-3 text-center text-decoration-none text-white'
-    let notActive = 'col-md-4 col-xl-3 text-center text-decoration-none inactive-link-color'
+    let active = 'p-3 text-center text-decoration-none text-white active-link'
+    let notActive = 'p-3 text-center text-decoration-none inactive-link'
 
   return (
     <Navbar expand="md" className='header'>
-      <Navbar.Brand href="/"><NavLink to="/"><img src={image} alt="BiciMundo" width="200" /></NavLink></Navbar.Brand>
+      <Navbar.Brand href="/"><NavLink to="/"><img src={image} alt="BiciMundo" width="200" className='home-logo'/></NavLink></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav d-flex">
-        <Nav className='header-container'>
-          <Container>
-          <Row>
+        <Nav className='nav-container'>
+          <Container className='header-container'>
+          <Row className='mt-3'>
             <Form onSubmit={handleSearch} className="d-flex w-100">
               <Form.Control
                 type="search"
@@ -38,17 +38,49 @@ const Header = () => {
               <Button type='submit' variant="outline-light">Buscar</Button>
             </Form>
           </Row>
-          <Row>
+          <Row className='links-row'>
             <Col className='mt-2 d-flex align-items-center'>
               <NavLink to="/" end className={({ isActive }) => (isActive ? active : notActive)}  >
                 Home
               </NavLink>
-              <NavLink to="/productos" className={({ isActive }) => (isActive ? active : notActive)} >
-                Productos
-              </NavLink>
+                <NavDropdown
+                      id="nav-dropdown-dark-example"
+                      align="end"
+                      title='Alquiler de equipos'
+                      className='px-1 py-0 m-0 rent-dropdown'
+                    >
+                      <Dropdown.Item>
+                        <NavLink to="/perfil" className="text-decoration-none text-dark">
+                          Raquetas de nieve
+                        </NavLink>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <NavLink to="/carrito" className="text-decoration-none text-dark">
+                          Mochilas
+                        </NavLink>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <NavLink to="/carrito" className="text-decoration-none text-dark">
+                          Carpas
+                        </NavLink>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <NavLink to="/carrito" className="text-decoration-none text-dark">
+                          Bolsas de dormir
+                        </NavLink>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <NavLink to="/carrito" className="text-decoration-none text-dark">
+                          Bastones de trekking
+                        </NavLink>
+                      </Dropdown.Item>
+                    </NavDropdown>
             </Col>
             <Col className='right-links-container mt-2'>
-                <NavLink to="/registro" className={({ isActive }) => (isActive ? active : notActive)} >
+                <NavLink to="/nosotros" className={({ isActive }) => (isActive ? active : notActive)} >
+                    Sobre nosotros
+                </NavLink>
+                <NavLink to="/contacto" className={({ isActive }) => (isActive ? active : notActive)} >
                     Contacto
                 </NavLink>
               {/* {
