@@ -10,6 +10,7 @@ import botas from "../../assests/images/botas.jpg"
 import campera from "../../assests/images/campera.jpg"
 import radio from "../../assests/images/radio.jpg"
 import bolsadormir from "../../assests/images/bolsadormir.jpg"
+import { HomeCarousel } from '../../components/HomeCarousel'
 
 const Home = () => {
   const [items, setItems] = useState([
@@ -56,16 +57,19 @@ const Home = () => {
   ]) 
 
   return (
-    <Container className="page-container">
-        <Row><h1>Equipos</h1></Row>
-        <Row className="justify-content-between my-4">
-          { 
-            items.map((item, i) => {
-              return <EquipmentCard id={i} item={item}/>
-            })
-          }
-        </Row>
-    </Container>
+    <div className="page-container">
+        <HomeCarousel />
+        <Container>
+          <Row><h1>Equipos</h1></Row>
+          <Row className="justify-content-between my-4">
+            { 
+              items.map((item, i) => {
+                return <EquipmentCard id={i} item={item}/>
+              })
+            }
+          </Row>
+        </Container>
+    </div>
   )
 }
 export default Home

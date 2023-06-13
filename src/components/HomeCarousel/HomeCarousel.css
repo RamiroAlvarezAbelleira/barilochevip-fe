@@ -1,0 +1,9 @@
+.home-carousel {
+    width: 100vw;
+    margin: auto;
+    background-color: rgba(230, 230, 230, 0.3);
+}
+
+.home-carousel-item {
+    transition: all 0.3s;
+}
