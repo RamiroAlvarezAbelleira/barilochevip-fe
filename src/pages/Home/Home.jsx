@@ -60,7 +60,7 @@ const Home = () => {
     <div className="page-container">
         <HomeCarousel />
         <Container>
-          <Row><h1>Equipos</h1></Row>
+          <Row><h1 className='text-start mt-5 mx-5'>Nuestros equipos.</h1></Row>
           <Row className="justify-content-between my-4">
             { 
               items.map((item, i) => {

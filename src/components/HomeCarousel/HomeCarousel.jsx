@@ -8,14 +8,14 @@ function HomeCarousel() {
     <Carousel variant="dark" className='home-carousel'>
       <Carousel.Item className='home-carousel-item'>
         <img
-          className="d-block w-50 m-auto"
+          className="d-block carousel-img m-auto"
           src={slider1}
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item className='home-carousel-item'>
         <img
-          className="d-block w-50 m-auto"
+          className="d- carousel-img m-auto"
           src={slider3}
           alt="Second slide"
         />

@@ -1,0 +1,62 @@
+.footer-container {
+    box-shadow: 0 0 10px black;
+}
+
+.instagram-container {
+    border-bottom: 1px solid rgb(50, 50, 50);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.instagram-logo {
+    width: 60px;
+    background-color: white;
+    padding: 0;
+    border-radius: 21px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    transition: all 0.3s;
+}
+
+.whatsapp-logo {
+    width: 40px;
+}
+
+.instagram-logo:hover {
+    box-shadow: 0 0 30px 4px #ff47af;
+}
+
+.list-titles {
+    text-align: start;
+    margin-left: 40%;
+    margin-bottom: 1rem;
+}
+
+.list-items {
+    list-style-type: none;
+    text-align: start;
+    width: fit-content;
+    margin: auto;
+}
+
+.list-items li {
+    font-size: 1.2rem;
+    color: rgb(200, 200, 200);
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(200, 200, 200);
+    transition: all 0.3s;
+}
+
+.link:hover {
+    font-size: 1.22rem;
+    color: white;
+}
+
+.divider {
+    border-left: 1px solid rgb(50, 50, 50);
+}
