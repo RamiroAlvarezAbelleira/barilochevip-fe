@@ -11,7 +11,7 @@ const Footer = () => {
         <Container className="text-white">
           <h3 className="text-center pt-3 mb-0">Redes sociales</h3>
           <Row className="instagram-container">
-            <Link to='https://www.instagram.com/ignacioarresesom/'>
+            <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link">
               <img src={instagramLogo} className="instagram-logo" alt="instagram"/>
             </Link>
           </Row>
