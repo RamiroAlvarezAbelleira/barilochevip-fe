@@ -1,5 +1,5 @@
 .contact-background {
-    background-image: url("../../assests/images/contact-background-1.jpg");
+    background-image: url("../../assests/images/contact-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -8,15 +8,16 @@
     margin-top: 5vh;
     padding-bottom: 15vh;
     border-radius: 1rem;
-    box-shadow: 0 0 25px -20px black;
 }
 
 .row-container {
     min-height: 60vh;
+    box-shadow: 0 0 25px -20px black;
 }
 
 .contact-title {
-    padding: 8vh 0;
+    font-size: 3rem;
+    padding: 8vh 0 1vh 0;
 }
 
 .contact-banner {
@@ -54,20 +55,32 @@
 }
 
 .instagram-logo-col {
-    padding: 0 7.5px;
+    padding: 0 15px 0 7.5px;
 }
 
 .instagram-logo-contacto:hover {
     box-shadow: 0 0 6px 1px #ff47af;
 }
 
+.contact-list-items {
+    list-style-type: none;
+    text-align: center;
+}
+
+.contact-list-items li {
+    color: rgb(150, 150, 150);
+    font-size: 1.5rem;
+}
+
 .contact-link {
+    display: block;
     text-decoration: none;
-    color: rgb(200, 200, 200);
+    width: fit-content;
+    color: rgb(150, 150, 150);
     transition: all 0.3s;
 }
 
 .contact-link:hover {
-    font-size: 1.22rem;
+    text-shadow: 1px 1px 1px black;
     color: black;
 }
