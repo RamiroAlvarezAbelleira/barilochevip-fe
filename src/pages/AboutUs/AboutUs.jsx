@@ -5,13 +5,24 @@ import img7 from "../../assests/images/img-7.jpg"
 import img3 from "../../assests/images/img-3.jpg"
 import img9 from "../../assests/images/img-9.jpg"
 import img8 from "../../assests/images/img-8.jpg"
+import mountainDecor from "../../assests/images/mountain-decor.png"
+import mountainDecor1 from "../../assests/images/mountain-decor-1.png"
 const AboutUs = () => {
   return (
     <div className="contact-background background-fixed">
         <Container className="about-container">
-            <Row>
-                <h1 className="about-title">Sobre Nosotros</h1>
+            <Row className="pt-5">
+                <Col>
+                    <img src={mountainDecor1} alt="decor" className="w-100 pt-4"/>
+                </Col>
+                <Col>
+                    <h1 className="about-title">Bariloche Vip</h1>
+                </Col>
+                <Col>
+                    <img src={mountainDecor} alt="decor" className="w-100 pt-4"/>
+                </Col>
             </Row>
+            <Row><h3 className="about-subtitle">Sobre Nosotros</h3></Row>
             <Row className="about-content">
                 <Row className="py-5">
                     <Col className="flex-center-col">
@@ -88,6 +99,17 @@ const AboutUs = () => {
                     </Col>
                     <Col className="flex-center-col">
                         <img src={img8} alt="equipo de bariloche vip" className="w-75 img-right"/>
+                    </Col>
+                </Row>
+                <Row className="pt-5 mt-5">
+                    <Col>
+                        <img src={mountainDecor1} alt="decor" className="w-100 pt-4"/>
+                    </Col>
+                    <Col>
+                        <h4 className="about-title fs-3">Gracias por elegirnos!</h4>
+                    </Col>
+                    <Col>
+                        <img src={mountainDecor} alt="decor" className="w-100 pt-4"/>
                     </Col>
                 </Row>
             </Row>
