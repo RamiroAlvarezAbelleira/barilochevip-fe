@@ -10,7 +10,7 @@ import campera from "../../assests/images/campera.jpg"
 import radio from "../../assests/images/radio.jpg"
 import bolsadormir from "../../assests/images/bolsadormir.jpg"
 
-export const emptyEquipmentState = [
+export const equipmentState = [
     {
         id: 0,
         name: 'Raquetas de nieve',
@@ -60,21 +60,25 @@ export const emptyEquipmentState = [
         image: bolsadormir
     }]
 
-export const persistLocalStorageEquipment = (equipment) => {
-    localStorage.setItem('equipment', JSON.stringify(equipment))
+export const emptyEquipmentState = {
+    id: 0,
+    name: 'Raquetas de nieve',
+    priceXday: 5000,
+    image: raquetas
 }
 
-export const equipmentSlice = createSlice({
+export const equipmentDetailSlice = createSlice({
     name: 'equipment',
-    initialState: localStorage.getItem('equipment') ? JSON.parse(localStorage.getItem('equipment')) : emptyEquipmentState,
+    initialState: emptyEquipmentState,
     reducers: {
-        getEquipment: (state, action) => {
-            persistLocalStorageEquipment(action.payload)
-            return action.payload
+        getEquipmentById: (state, action) => {
+            let equipment = equipmentState.filter(item => item.id === Number(action.payload))
+            console.log(equipment)
+            return equipment[0]
         }
     }
 })
 
-export const { getEquipment } = equipmentSlice.actions
+export const { getEquipmentById } = equipmentDetailSlice.actions
 
-export default equipmentSlice.reducer
+export default equipmentDetailSlice.reducer

@@ -15,7 +15,7 @@ const Home = () => {
           <Row className="justify-content-between my-4">
             { 
               items.map((item, i) => {
-                return <EquipmentCard id={i} item={item}/>
+                return <EquipmentCard key={i} item={item}/>
               })
             }
           </Row>
