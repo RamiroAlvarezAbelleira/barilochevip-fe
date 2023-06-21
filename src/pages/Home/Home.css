@@ -1,3 +1,10 @@
 .page-container {
     min-height: 50vh;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+.container-custom-style {
+    box-shadow: 0 0 30px -20px black;
+    background-color: white;
 }
