@@ -1,0 +1,23 @@
+.rbc-toolbar {
+    background-color: black;
+    color: white
+}
+
+.rbc-btn-group button {
+    color: white;
+}
+
+.rbc-event {
+    background-color: red;
+}
+
+.rbc-event.rbc-selected {
+    border-color: white;
+    background-color: red;
+}
+
+.rbc-event-content {
+    /* background-color: black; */
+    color: white
+}
+  
