@@ -46,7 +46,7 @@ const Header = () => {
                 <NavDropdown
                       id="nav-dropdown-dark-example"
                       align="end"
-                      title='Alquiler de equipos'
+                      title='Equipos'
                       className='px-1 py-0 m-0 rent-dropdown'
                     >
                       <Dropdown.Item>

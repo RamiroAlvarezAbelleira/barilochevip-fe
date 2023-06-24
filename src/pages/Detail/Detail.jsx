@@ -22,19 +22,20 @@ const Detail = () => {
         <Container className="container-custom-style custom-border-radius p-5">
             <Row>
                 <Col>
-                    <Row>
-                        <h4 className="pb-3">{equipment?.name}</h4>
-                        <img src={equipment.image} alt={equipment.name}/>
+                    <Row className="image-container">
+                        <h4 className="pb-3 fs-1">{equipment?.name}</h4>
+                        <img src={equipment.image} alt={equipment.name} className="h-75 w-auto"/>
                     </Row>
                     <Row><h3>Disponibilidad</h3></Row>
                     <Row className="py-5 my-5">
                         <MyCalendar />
                     </Row>
                 </Col>
-                <Col lg={4} xxl={3} className="py-5 equipment-details custom-border-radius">
+                <Col lg={4} xxl={3} className="py-5 equipment-details">
                     <h4>Detalles</h4>
                     <p className="text-start">$ {equipment.priceXday} el dia</p>
                     <p className="text-start">10 en stock</p>
+                    <p className="text-start">Descripcion: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aperiam similique beatae est, asperiores alias modi non aut dolorum, in nulla voluptates voluptate recusandae ex.</p>
                     <h5 className="pt-4">Contactenos para reservar</h5>
                     <Row>
                         <ul className="contact-list-items">

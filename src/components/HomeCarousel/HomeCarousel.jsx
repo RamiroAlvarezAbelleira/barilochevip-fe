@@ -1,11 +1,11 @@
 import {Carousel} from 'react-bootstrap';
-import slider1 from '../../assests/images/slider-1.jpg'
-import slider3 from '../../assests/images/slider-3.jpg'
+import slider1 from '../../assests/images/slider-1.1.jpg'
+import slider3 from '../../assests/images/slider-3.1.jpg'
 import './HomeCarousel.css'
 
 function HomeCarousel() {
   return (
-    <Carousel variant="dark" className='home-carousel'>
+    <Carousel className='home-carousel'>
       <Carousel.Item className='home-carousel-item'>
         <img
           className="d-block carousel-img m-auto"
