@@ -7,6 +7,7 @@ import { getEquipmentById } from "../../redux/states/equipmentDetail"
 import MyCalendar from "../../components/MyCalendar/MyCalendar"
 import instagramLogo from "../../assests/images/instagram-logo.png"
 import whatsappLogo from "../../assests/images/whatsapp-logo.png"
+import axios from "../../api/axios"
 
 const Detail = () => {
     const {id} = useParams()
@@ -14,7 +15,13 @@ const Detail = () => {
     const equipment = useSelector(state => state.equipmentDetail)
 
     useEffect(() => {
-        dispatch(getEquipmentById(id))
+        const getEquipment = async () => {
+            const response = await axios.get(`equipos/${id}`)
+            if (response.status === 200) {
+                dispatch(getEquipmentById(response.data))
+            }
+        }
+        getEquipment()
     },[id, dispatch])
 
   return (equipment && 
@@ -24,18 +31,18 @@ const Detail = () => {
                 <Col>
                     <Row className="image-container">
                         <h4 className="pb-3 fs-1">{equipment?.name}</h4>
-                        <img src={equipment.image} alt={equipment.name} className="h-75 w-auto"/>
+                        <img src={equipment.images[0].image_url} alt={equipment.name} className="h-75 w-auto"/>
                     </Row>
                     <Row><h3>Disponibilidad</h3></Row>
                     <Row className="py-5 my-5">
-                        <MyCalendar />
+                        <MyCalendar bookings={equipment.bookings} stock_total={equipment.stock_total}/>
                     </Row>
                 </Col>
                 <Col lg={4} xxl={3} className="py-5 equipment-details">
                     <h4>Detalles</h4>
-                    <p className="text-start">$ {equipment.priceXday} el dia</p>
-                    <p className="text-start">10 en stock</p>
-                    <p className="text-start">Descripcion: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aperiam similique beatae est, asperiores alias modi non aut dolorum, in nulla voluptates voluptate recusandae ex.</p>
+                    <p className="text-start">$ {equipment.price} el dia</p>
+                    <p className="text-start">{equipment.stock_total} en stock</p>
+                    <p className="text-start">Descripcion: {equipment.description}</p>
                     <h5 className="pt-4">Contactenos para reservar</h5>
                     <Row>
                         <ul className="contact-list-items">

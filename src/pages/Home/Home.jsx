@@ -2,11 +2,24 @@ import { Container, Row } from 'react-bootstrap'
 import './Home.css'
 import { EquipmentCard } from '../../components/EquipmentCard'
 import { HomeCarousel } from '../../components/HomeCarousel'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import axios from '../../api/axios'
+import { getEquipment } from '../../redux/states/equipment'
 
 const Home = () => {
   const items = useSelector(state => state.equipment)
+  const dispatch = useDispatch()
 
+  useEffect(() => {
+    const getEquipos = async () => {
+      const response = await axios.get('/equipos')
+      if (response.status === 200) {
+        dispatch(getEquipment(response.data))
+      }
+    }
+    getEquipos()
+  },[dispatch])
   return (
     <div className="page-container">
       <HomeCarousel />

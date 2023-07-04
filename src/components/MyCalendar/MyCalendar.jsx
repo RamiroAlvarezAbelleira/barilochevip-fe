@@ -5,16 +5,11 @@ import 'moment/locale/es';
 import "./MyCalendar.css"
 import { useEffect } from 'react';
 
-const MyCalendar = () => {
+const MyCalendar = ({bookings, stock_total}) => {
     const localizer = momentLocalizer(moment);
-    const events = [
-        {
-          title: 'Reserva agotada!',
-          start: moment().toDate(),
-          end: moment().add(1, 'hours').toDate(),
-        },
-        // Add more events as needed
-      ];
+    const events = bookings.map((booking) => {
+      return {title: `${stock_total - 1} Disponibles`, start: booking.start_date, end: booking.end_date,}
+    })
 
       useEffect(() => {
         moment.locale('es')
