@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom"
 import "./Detail.css"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Col, Container, Row } from "react-bootstrap"
 import { getEquipmentById } from "../../redux/states/equipmentDetail"
@@ -11,6 +11,7 @@ import axios from "../../api/axios"
 
 const Detail = () => {
     const {id} = useParams()
+    const [done, setDone] = useState(false)
     const dispatch = useDispatch()
     const equipment = useSelector(state => state.equipmentDetail)
 
@@ -18,20 +19,22 @@ const Detail = () => {
         const getEquipment = async () => {
             const response = await axios.get(`equipos/${id}`)
             if (response.status === 200) {
+                console.log(response.data)
+                setDone(true)
                 dispatch(getEquipmentById(response.data))
             }
         }
         getEquipment()
     },[id, dispatch])
 
-  return (equipment && 
+  return (done && 
     <div className="page-container py-5">
         <Container className="container-custom-style custom-border-radius p-5">
             <Row>
                 <Col>
                     <Row className="image-container">
                         <h4 className="pb-3 fs-1">{equipment?.name}</h4>
-                        <img src={equipment.images[0].image_url} alt={equipment.name} className="h-75 w-auto"/>
+                        <img src={equipment.images[0]?.image_url} alt={equipment.name} className="h-75 w-auto"/>
                     </Row>
                     <Row><h3>Disponibilidad</h3></Row>
                     <Row className="py-5 my-5">
