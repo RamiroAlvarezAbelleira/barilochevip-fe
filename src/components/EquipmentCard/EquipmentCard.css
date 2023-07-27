@@ -1,0 +1,8 @@
+.equipment-card {
+    border: none;
+    transition: all 0.6s;
+}
+
+.equipment-card:hover {
+    box-shadow: 0 0 30px -15px black;
+}
