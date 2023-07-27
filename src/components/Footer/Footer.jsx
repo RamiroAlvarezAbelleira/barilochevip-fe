@@ -1,5 +1,4 @@
 import { Col, Container, Row } from "react-bootstrap"
-import { BsInstagram } from "react-icons/bs"
 import "./Footer.css"
 import instagramLogo from "../../assests/images/instagram-logo.png"
 import whatsappLogo from "../../assests/images/whatsapp-logo.png"

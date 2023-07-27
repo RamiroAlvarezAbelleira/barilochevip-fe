@@ -19,7 +19,6 @@ const Detail = () => {
         const getEquipment = async () => {
             const response = await axios.get(`equipos/${id}`)
             if (response.status === 200) {
-                console.log(response.data)
                 setDone(true)
                 dispatch(getEquipmentById(response.data))
             }

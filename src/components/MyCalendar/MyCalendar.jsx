@@ -22,7 +22,7 @@ const MyCalendar = ({bookings, stock_total}) => {
         setEvents(newEvents)
       }
       handleBookings()
-    },[bookings, events, stock_total])
+    },[bookings, stock_total])
 
   return (
     <Calendar
