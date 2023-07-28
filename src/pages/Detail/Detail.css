@@ -1,3 +1,10 @@
+.detail-page-container {
+    min-height: 50vh;
+    margin: 0;
+    background-color: var(--background-color);
+    padding: 100px 0;
+}
+
 .custom-border-radius {
     border-radius: 1rem;
 }
@@ -13,4 +20,23 @@
     border-left: 1px solid rgb(240, 240, 240);
     position: sticky;
     top: 25px;
+}
+
+@media (max-width: 990px) {
+    .detail-page-container {
+        padding: 0;
+    }
+    .custom-border-radius {
+        border-radius: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .image-container {
+        width: 95vw;
+        margin: auto;
+    }
+    .equipment-details {
+        width: 95vw;
+        margin: auto;
+    }
 }

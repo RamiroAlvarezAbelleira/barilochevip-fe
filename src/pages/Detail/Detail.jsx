@@ -27,16 +27,18 @@ const Detail = () => {
     },[id, dispatch])
 
   return (done && 
-    <div className="page-container py-5">
+    <div className="detail-page-container">
         <Container className="container-custom-style custom-border-radius p-5">
             <Row>
                 <Col>
                     <Row className="image-container">
-                        <h4 className="pb-3 fs-1">{equipment?.name}</h4>
+                        <h4 className="pb-3 fs-1 text-start">{equipment?.name}</h4>
                         <img src={equipment.images[0]?.image_url} alt={equipment.name} className="h-75 w-auto"/>
                     </Row>
-                    <Row><h3>Disponibilidad</h3></Row>
-                    <Row className="py-5 my-5">
+                    <Row className="d-flex justify-content-center">
+                        <h3 className="text-start w-75 mt-5 pt-5 border-top">Disponibilidad</h3>
+                    </Row>
+                    <Row className="py-5 mb-5">
                         <MyCalendar bookings={equipment.bookings} stock_total={equipment.stock_total}/>
                     </Row>
                 </Col>
