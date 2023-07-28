@@ -11,7 +11,7 @@
 .header-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     height: 100%;
 }
 
@@ -36,22 +36,70 @@
     color: rgb(200, 200, 200) !important;
 }
 
-.cart-total-items-badge {
-    position: absolute;
-    top: 0;
-    right: 35px;
+.links-row {
+    padding-bottom: 1rem;
 }
 
 .inactive-link {
     color: rgb(200, 200, 200);
-    font-size: 1.25rem;
+    font-size: 1.4vw;
+    padding: 0 1rem;
     transition: all 0.3s;
 }
 
 .active-link {
-    font-size: 1.20rem;
+    font-size: 1.3vw;
+    padding: 0 1rem;
 }
 
 .inactive-link:hover {
     color: white;
+}
+
+.navbar-toggler {
+    background-color: #3a3a3a;
+    margin-right: 1rem;
+    box-shadow: 0 0 10px 0 white;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 10px 0 white;
+}
+.navbar-collapse.show {
+    z-index: 2;
+}
+
+.navbar-collapse.show .nav-container {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 991px) {
+    #content > nav > a > a > img {
+        width: 18vw !important;
+    }    
+
+    .inactive-link {
+        font-size: 1.7vw;
+        width: max-content;
+    }
+    
+    .active-link {
+        font-size: 1.6vw;
+        width: max-content;
+    }
+}
+@media (max-width: 767px) {
+    .nav-container {
+        width: 100vw !important;
+        height: fit-content;
+        position: absolute;
+        left: 0;
+    }
+
+    .inactive-link {
+        font-size: 3vw;
+    }
+    
+    .active-link {
+        font-size: 2.9vw;
+    }
 }
