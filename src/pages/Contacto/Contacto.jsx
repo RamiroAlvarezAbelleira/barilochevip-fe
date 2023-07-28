@@ -8,6 +8,31 @@ const Contacto = () => {
   return (
     <div className="contact-background">
         <h1 className="contact-title">Contactenos para realizar su consulta o reserva!</h1>
+        <Container className="small-contact-page-container">
+            <Row className="small-row-container">
+                <Row className="align-items-center">
+                    <h1 className="small-contact-title">Contactenos para realizar su consulta o reserva!</h1>
+                </Row>
+                <Row>
+                    <h3 className="fs-2 pb-3 pt-5">Nuestras redes</h3>
+                    <p className="fs-4 p-0">En la brevedad estaremos respondiendo su consulta</p>
+                </Row>
+                <Row>
+                    <ul className="contact-list-items">
+                        <li>
+                            <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 5555 5555
+                        </li>
+                        <li>
+                            <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link contact-link">
+                                <Row className="instagram-logo-container">
+                                    <Col className="instagram-logo-col"><img src={instagramLogo} className="instagram-logo-contacto" alt="instagram"/></Col> <Col className="p-0  text-dark">@ignacioarresesom</Col>
+                                </Row>
+                            </Link> 
+                        </li>
+                    </ul>
+                </Row>
+            </Row>
+        </Container>
         <Container className="contact-page-container">
             <Row className="row-container">
                 <Col className="contact-banner">

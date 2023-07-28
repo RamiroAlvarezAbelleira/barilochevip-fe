@@ -105,7 +105,7 @@ const AboutUs = () => {
                     <Col>
                         <img src={mountainDecor1} alt="decor" className="w-100 pt-4"/>
                     </Col>
-                    <Col className="justify-content-center">
+                    <Col className="d-flex justify-content-center align-items-center">
                         <h4 className="about-thanks fs-3">Gracias por elegirnos!</h4>
                     </Col>
                     <Col>

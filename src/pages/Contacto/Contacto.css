@@ -1,3 +1,11 @@
+.small-contact-page-container {
+    display: none;
+}
+
+.small-contact-title {
+    display: none;
+}
+
 .contact-background {
     background-image: url("../../assests/images/contact-background.jpg");
     background-repeat: no-repeat;
@@ -83,4 +91,34 @@
 .contact-link:hover {
     text-shadow: 1px 1px 1px black;
     color: black;
+}
+
+@media (max-width: 991px) {
+    .contact-page-container {
+        display: none;
+    }
+
+    .contact-title {
+        display: none;
+    }
+
+    .small-contact-page-container {
+        display: block;
+        min-width: 100vw;
+    }
+
+    .small-contact-title {
+        display: block;
+    }
+
+    .small-row-container {
+        background-color: rgba(255, 255, 255, 0.7);
+        min-height: 60vh; 
+        justify-content: center;
+        padding: 5rem 0;
+    }
+
+    .contact-list-items li {
+        color: black;
+    }
 }
