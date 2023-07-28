@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <div className="contact-background background-fixed">
         <Container className="about-container">
-            <Row className="pt-5">
+            <Row className="pt-5 top-bottom-row">
                 <Col>
                     <img src={mountainDecor1} alt="decor" className="w-100 pt-4"/>
                 </Col>
@@ -38,12 +38,12 @@ const AboutUs = () => {
                         </p>
                     </Col>
                     <Col className="flex-center-col">
-                        <img src={img7} alt="equipo de bariloche vip" className="w-75 img-right"/>
+                        <img src={img7} alt="equipo de bariloche vip" className="img-right"/>
                     </Col>
                 </Row>
                 <Row className="py-5">
                     <Col className="flex-center-col">
-                        <img src={img9} alt="equipo de bariloche vip" className="w-75 img-left"/>
+                        <img src={img9} alt="equipo de bariloche vip" className="img-left"/>
                     </Col>
                     <Col className="flex-center-col">
                         <p className="border-left">
@@ -72,12 +72,12 @@ const AboutUs = () => {
                         </p>
                     </Col>
                     <Col className="flex-center-col">
-                        <img src={imagenEquipo} alt="equipo de bariloche vip" className="w-75 img-right"/>
+                        <img src={imagenEquipo} alt="equipo de bariloche vip" className="img-right"/>
                     </Col>
                 </Row>
                 <Row className="py-5">
                     <Col className="flex-center-col">
-                        <img src={img3} alt="equipo de bariloche vip" className="w-75 img-left"/>
+                        <img src={img3} alt="equipo de bariloche vip" className="img-left"/>
                     </Col>
                     <Col className="flex-center-col">
                         <p className="border-left">
@@ -98,15 +98,15 @@ const AboutUs = () => {
                         </p>
                     </Col>
                     <Col className="flex-center-col">
-                        <img src={img8} alt="equipo de bariloche vip" className="w-75 img-right"/>
+                        <img src={img8} alt="equipo de bariloche vip" className="img-right"/>
                     </Col>
                 </Row>
-                <Row className="pt-5 mt-5">
+                <Row className="pt-5 mt-5 top-bottom-row">
                     <Col>
                         <img src={mountainDecor1} alt="decor" className="w-100 pt-4"/>
                     </Col>
-                    <Col>
-                        <h4 className="about-title fs-3">Gracias por elegirnos!</h4>
+                    <Col className="justify-content-center">
+                        <h4 className="about-thanks fs-3">Gracias por elegirnos!</h4>
                     </Col>
                     <Col>
                         <img src={mountainDecor} alt="decor" className="w-100 pt-4"/>
