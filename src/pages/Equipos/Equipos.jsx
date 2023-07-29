@@ -2,14 +2,18 @@ import { useEffect, useState } from "react"
 import { Container, Row } from "react-bootstrap"
 import { useLocation } from "react-router-dom"
 import { EquipmentCard } from "../../components/EquipmentCard"
+import { useSelector } from "react-redux"
 
 const Equipos = () => {
     const location = useLocation()
     const [items, setItems] = useState([])
+    const equipos = useSelector(state => state.equipment)
 
     useEffect(() => {
-      if (location.state) {
+      if (location.state.length > 0) {
         setItems(location.state)
+      } else {
+        setItems(equipos)
       }
     }, [location])
     

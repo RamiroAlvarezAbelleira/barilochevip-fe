@@ -12,10 +12,8 @@ const Header = () => {
 
     const handleSearch = async (e) => {
       e.preventDefault()
-      if (search.current?.value !== "") {
-        const response = await axios.get(`/equipos?query=${search.current.value}`)
-        navigate('/equipos', {state: response.data})
-      }
+      const response = await axios.get(`/equipos?query=${search.current.value}`)
+      navigate('/equipos', {state: response.data})
     }
 
     /* active and inactive link styles*/
