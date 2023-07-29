@@ -1,15 +1,21 @@
 import { useRef } from 'react';
-import { Navbar, Nav, Container, Form, Button, Dropdown, Row, Col, NavDropdown } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom';
+import { Navbar, Nav, Container, Form, Button, Row, Col } from 'react-bootstrap'
+import { NavLink, useNavigate } from 'react-router-dom';
 import image from "../../assests/images/Bvip-LOGO.png";
 import "./Header.css"
+import axios from '../../api/axios';
 
 const Header = () => {
 
     const search = useRef()
+    const navigate = useNavigate()
 
-    const handleSearch = () => {
-
+    const handleSearch = async (e) => {
+      e.preventDefault()
+      if (search.current?.value !== "") {
+        const response = await axios.get(`/equipos?query=${search.current.value}`)
+        navigate('/equipos', {state: response.data})
+      }
     }
 
     /* active and inactive link styles*/
