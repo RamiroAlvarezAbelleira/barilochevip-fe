@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <footer className="sticky-footer bg-black footer-container">
-        <Container className="text-white">
+        <Container className="text-white footer-container">
           <h3 className="text-center pt-3 mb-0">Redes sociales</h3>
           <Row className="instagram-container">
             <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link">
@@ -18,8 +18,8 @@ const Footer = () => {
             <Col span={6}>
               <h4 className="list-titles">Contacto</h4>
               <ul className="list-items">
-                <li>
-                <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 5555 5555
+                <li className="phonenumber">
+                  <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 5555 5555
                 </li>
               </ul>
             </Col>
@@ -30,7 +30,7 @@ const Footer = () => {
                   <Link to='/contacto' className="link">Contacto</Link>
                 </li>
                 <li>
-                  <Link to='/equipos' className="link">Equipos</Link>
+                  <Link to='/' className="link">Equipos</Link>
                 </li>
                 <li>
                   <Link to='/nosotros' className="link">Sobre nosotros</Link>

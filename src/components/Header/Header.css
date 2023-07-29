@@ -27,14 +27,6 @@
     justify-content: flex-end;
     position: relative;
 }
-.rent-dropdown {
-    width: fit-content;
-    font-size: 1.25rem;
-}
-
-.rent-dropdown > a {
-    color: rgb(200, 200, 200) !important;
-}
 
 .links-row {
     padding-bottom: 1rem;
@@ -42,13 +34,13 @@
 
 .inactive-link {
     color: rgb(200, 200, 200);
-    font-size: 1.4vw;
+    font-size: 1vw;
     padding: 0 1rem;
     transition: all 0.3s;
 }
 
 .active-link {
-    font-size: 1.3vw;
+    font-size: 0.99vw;
     padding: 0 1rem;
 }
 
@@ -72,6 +64,16 @@
 .navbar-collapse.show .nav-container {
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+@media (max-width: 1600px) {
+    .inactive-link {
+        font-size: 1.4vw;
+    }
+    
+    .active-link {
+        font-size: 1.39vw;
+    }
+}
 @media (max-width: 991px) {
     #content > nav > a > a > img {
         width: 18vw !important;
@@ -83,7 +85,7 @@
     }
     
     .active-link {
-        font-size: 1.6vw;
+        font-size: 1.69vw;
         width: max-content;
     }
 }
