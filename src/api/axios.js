@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export default axios.create({
-    baseURL: 'http://[::1]:3000/api/v1'
+    baseURL: 'https://barilochevip-be-production.up.railway.app/api/v1'
 })

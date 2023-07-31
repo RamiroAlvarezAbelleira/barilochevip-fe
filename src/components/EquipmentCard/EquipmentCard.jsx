@@ -1,16 +1,30 @@
 import { Card } from "react-bootstrap"
 import "./EquipmentCard.css"
 import { Link } from "react-router-dom"
+import { useEffect, useState } from "react";
 
 const EquipmentCard = ({item}) => {
-  return (
+  const [show, setShow] = useState(false);
+  const [equipment, setEquipment] = useState()
+  useEffect(() => {
+    let newImages = [];
+    item.images.forEach(image => {
+      const startIndex = image.image_url.indexOf('/rails/');
+      const cutString = image.image_url.substring(startIndex);
+      newImages.push({image_url: `https://barilochevip-be-production.up.railway.app${cutString}`})
+    })
+    setEquipment({...item, images: newImages})
+  }, [item])
+  
+  return (equipment &&
     
       <Card style={{ width: '18rem' }} className="my-3 equipment-card">
-        <Link to={`/detalle/${item.id}`} className="text-decoration-none text-dark h-100 d-flex flex-column justify-content-between">
-        <Card.Img variant="top" src={item.images[0]?.image_url} />
+        <Link to={`/detalle/${equipment.id}`} onMouseEnter={() => {setShow(true)}} onMouseLeave={() => {setShow(false)}} className="text-decoration-none text-dark h-100 d-flex flex-column justify-content-between">
+        <Card.Img variant="top" src={equipment.images[0]?.image_url} />
         <Card.Body className="d-flex flex-column justify-content-end">
-          <Card.Title>{item.name}</Card.Title>
-          <Card.Subtitle className="pb-3">Precio por dia: $ {item.price}</Card.Subtitle>
+          <Card.Subtitle className={ show ? "pb-3 appear-on-hover show" : "pb-3 appear-on-hover"}>Precio por dia: <span className="text-success">$ {equipment.price}</span></Card.Subtitle>
+          <Card.Title>{equipment.name}</Card.Title>
+          <Card.Subtitle className={ show ? "py-3 appear-on-hover show" : "py-3 appear-on-hover"}>Ver disponibilidad</Card.Subtitle>
         </Card.Body>
         </Link>
       </Card>
