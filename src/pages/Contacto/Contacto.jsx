@@ -14,7 +14,7 @@ const Contacto = () => {
                     <h1 className="small-contact-title">Contactenos para realizar su consulta o reserva!</h1>
                 </Row>
                 <Row>
-                    <h3 className="fs-2 pb-3 pt-5">Nuestras redes</h3>
+                    <h3 className="fs-2 pb-3 pt-5 custom-font">Nuestras redes</h3>
                     <p className="fs-4 p-0">En la brevedad estaremos respondiendo su consulta</p>
                 </Row>
                 <Row>
@@ -39,7 +39,7 @@ const Contacto = () => {
                 </Col>
                 <Col className="contact-container">
                     <Row>
-                        <h3 className="fs-2 pb-3">Nuestras redes</h3>
+                        <h3 className="fs-2 pb-3 custom-font">Nuestras redes</h3>
                         <p className="fs-4 pb-5">En la brevedad estaremos respondiendo su consulta</p>
                     </Row>
                     <Row>

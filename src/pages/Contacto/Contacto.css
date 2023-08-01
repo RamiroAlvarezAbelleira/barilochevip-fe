@@ -2,8 +2,13 @@
     display: none;
 }
 
+.custom-font {
+    font-family: 'Anton', sans-serif;
+}
+
 .small-contact-title {
     display: none;
+    font-family: 'Anton', sans-serif;
 }
 
 .contact-background {
@@ -26,6 +31,7 @@
 .contact-title {
     font-size: 3rem;
     padding: 8vh 0 1vh 0;
+    font-family: 'Anton', sans-serif;
 }
 
 .contact-banner {

@@ -34,7 +34,7 @@ const MyCalendar = ({bookings, stock_total}) => {
       );
   
       const hasOutOfStockEvent = dayEvents.some((event) => event.isOutOfStock);
-      const className = hasOutOfStockEvent ? 'has-out-of-stock-event' : 'has-available-stock-event';
+      const className = hasOutOfStockEvent ? 'has-out-of-stock-event' : moment() < moment(date) ? 'has-available-stock-event' : '';
   
       return { className: className };
     };

@@ -19,8 +19,16 @@ const Detail = () => {
         const getEquipment = async () => {
             const response = await axios.get(`equipos/${id}`)
             if (response.status === 200) {
+                let newEquipo = []
+                let newImages = []
+                response.data.images.forEach(image => {
+                    const startIndex = image.image_url.indexOf('/rails/');
+                    const cutString = image.image_url.substring(startIndex);
+                    newImages.push({image_url: `https://barilochevip-be-production.up.railway.app${cutString}`})
+                })
+                newEquipo = {...response.data, images: newImages}
+                dispatch(getEquipmentById(newEquipo))
                 setDone(true)
-                dispatch(getEquipmentById(response.data))
             }
         }
         getEquipment()
