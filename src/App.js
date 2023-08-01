@@ -7,6 +7,7 @@ import { Contacto } from './pages/Contacto';
 import { AboutUs } from './pages/AboutUs';
 import { Detail } from './pages/Detail';
 import { Equipos } from './pages/Equipos';
+import { DestinationDetail } from './pages/DestinationDetail';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/contacto' element={<Contacto />} />
           <Route path='/nosotros' element={<AboutUs />} />
           <Route path='/detalle/:id' element={<Detail />} />
+          <Route path='/destinations/:id' element={<DestinationDetail />} />
         </Routes>
       </ContentWrapper>
     </div>

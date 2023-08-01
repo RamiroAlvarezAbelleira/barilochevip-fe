@@ -15,7 +15,7 @@ const Equipos = () => {
       } else {
         setItems(equipos)
       }
-    }, [location])
+    }, [location, equipos])
     
   return (
     <div className="page-container">

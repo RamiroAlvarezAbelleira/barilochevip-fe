@@ -19,3 +19,9 @@
     opacity: 1;
     left: 0;
 }
+
+.equipment-img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

@@ -1,6 +1,4 @@
 import {Carousel} from 'react-bootstrap';
-import slider1 from '../../assests/images/slider-1.2.jpg'
-import slider3 from '../../assests/images/slider-3.2.jpg'
 import './HomeCarousel.css'
 
 function HomeCarousel() {
