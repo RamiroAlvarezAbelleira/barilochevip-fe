@@ -1,0 +1,43 @@
+.destination-card {
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+.anton-font {
+    font-family: 'Anton', sans-serif;
+}
+
+.destination-card:hover {
+    border: 3px solid black;
+}
+
+.img-height {
+    height: 150px;
+    border-radius: 0.3rem;
+}
+
+.img-1 {
+    background-image: url('../../assests/images/cerro-lopez.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img-2 {
+    background-image: url('../../assests/images/cerro-capilla.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img-3 {
+    background-image: url('../../assests/images/cerro-frey.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img-4 {
+    background-image: url('../../assests/images/cerro-llao-llao.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

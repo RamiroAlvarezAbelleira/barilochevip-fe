@@ -1,0 +1,48 @@
+.rbc-toolbar {
+    background-color: black;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.rbc-month-view {
+    border-radius: 0 0 10px 10px;
+}
+
+.rbc-btn-group button {
+    color: white;
+}
+
+.rbc-event.rbc-selected {
+    border-color: white;
+    background-color: black;
+}
+
+.rbc-event.red {
+    background-color: rgba(255, 0, 0, 0);
+    text-align: center;
+}
+
+.rbc-event.green {
+    background-color: rgba(0, 255, 0, 0);
+    text-align: center;
+}
+
+.rbc-event.red .rbc-event-content {
+    color: red;
+}
+
+.rbc-event.green .rbc-event-content {
+    color: rgb(0, 180, 0);
+}
+  
+.rbc-day-bg.has-out-of-stock-event {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+  
+.rbc-day-bg.has-available-stock-event {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.rbc-day-bg.has-available-stock-event.rbc-off-range-bg {
+    background-color: rgba(0, 0, 0, 0.1);
+}
