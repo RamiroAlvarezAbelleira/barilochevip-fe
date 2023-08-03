@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import { useLocation } from "react-router-dom"
 import mountainDecor from "../../assests/images/mountain-decor.png"
 import mountainDecor1 from "../../assests/images/mountain-decor-1.png"
+import "./DestinationDetail.css"
 
 const DestinationDetail = () => {
     const location = useLocation()
@@ -30,7 +31,13 @@ const DestinationDetail = () => {
             </Row>
             <Row><h3 className="about-title py-5 px-2 text-center m-auto">{destination.subtitle}</h3></Row>
             <Row className="about-content py-5">
-                <p>{destination.info}</p>
+                <Col className="flex-center-col">
+                    <p className="border-right">{destination.info}</p>
+                </Col>
+                <Col className="flex-center-col">
+                    <div className={`destination-detail-img-container ${destination.img}`}></div>
+                </Col>
+                
             </Row>
         </Container>
     </div>

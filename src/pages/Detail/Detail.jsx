@@ -1,38 +1,29 @@
 import { Link, useParams } from "react-router-dom"
 import "./Detail.css"
 import { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
 import { Col, Container, Row } from "react-bootstrap"
-import { getEquipmentById } from "../../redux/states/equipmentDetail"
 import MyCalendar from "../../components/MyCalendar/MyCalendar"
 import instagramLogo from "../../assests/images/instagram-logo.png"
 import whatsappLogo from "../../assests/images/whatsapp-logo.png"
 import axios from "../../api/axios"
+import arrangeEquipmentImages from "../../helpers/arrangeEquipmentImages"
 
 const Detail = () => {
     const {id} = useParams()
     const [done, setDone] = useState(false)
-    const dispatch = useDispatch()
-    const equipment = useSelector(state => state.equipmentDetail)
+    const [equipment, setEquipment] = useState({})
 
     useEffect(() => {
         const getEquipment = async () => {
             const response = await axios.get(`equipos/${id}`)
             if (response.status === 200) {
-                let newEquipo = []
-                let newImages = []
-                response.data.images.forEach(image => {
-                    const startIndex = image.image_url.indexOf('/rails/');
-                    const cutString = image.image_url.substring(startIndex);
-                    newImages.push({image_url: `https://barilochevip-be-production.up.railway.app${cutString}`})
-                })
-                newEquipo = {...response.data, images: newImages}
-                dispatch(getEquipmentById(newEquipo))
+                let newEquipo = arrangeEquipmentImages(response.data)
+                setEquipment(newEquipo)
                 setDone(true)
             }
         }
         getEquipment()
-    },[id, dispatch])
+    },[id])
 
   return (done && 
     <div className="detail-page-container">

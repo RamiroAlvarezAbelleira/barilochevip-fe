@@ -3,10 +3,11 @@ import './Home.css'
 import { EquipmentCard } from '../../components/EquipmentCard'
 import { HomeCarousel } from '../../components/HomeCarousel'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import axios from '../../api/axios'
 import { getEquipment } from '../../redux/states/equipment'
 import { DestinationCard } from '../../components/DestinationCard'
+import SkeletonCard from '../../components/SkeletonCard/SkeletonCard'
 
 const Home = () => {
   const destinations = [
@@ -39,14 +40,18 @@ const Home = () => {
       info: 'El Cerro Llao Llao es una opción ideal para aquellos que buscan una caminata relajante y pintoresca. Ubicado cerca del Hotel Llao Llao, este cerro ofrece senderos bien señalizados y fáciles de seguir, con vistas panorámicas del lago Nahuel Huapi y las montañas circundantes. Durante el recorrido, los excursionistas pueden encontrarse con el Mirador de Llao Llao, que brinda una vista excepcional del entorno. Esta caminata es perfecta para disfrutar de la naturaleza sin un nivel de dificultad excesivo.'
     },
   ]
+  const [loading, setLoading] = useState(true)
+  const skeletons = [1,2,3,4,5,6]
   const items = useSelector(state => state.equipment)
   const dispatch = useDispatch()
 
   useEffect(() => {
     const getEquipos = async () => {
+      setLoading(true)
       const response = await axios.get('/equipos')
       if (response.status === 200) {
         dispatch(getEquipment(response.data))
+        setLoading(false)
       }
     }
     getEquipos()
@@ -58,10 +63,14 @@ const Home = () => {
         <Container className='p-0 container-custom-style'>
           <Row className='custom-row'><h1 className='text-start m-5 w-100 home-title home-section-title'>Nuestros equipos.</h1></Row>
           <Row className="justify-content-center py-4 px-5 custom-row">
-            { 
-              items.map((item, i) => {
+            { loading ? <>
+              {skeletons.map(() => {
+                  return <SkeletonCard/>
+                })}</> : <>
+              {items.map((item, i) => {
                 return <EquipmentCard key={i} item={item}/>
-              })
+              })}
+            </>
             }
           </Row>
         </Container>
