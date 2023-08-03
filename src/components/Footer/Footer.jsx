@@ -19,7 +19,7 @@ const Footer = () => {
               <h4 className="list-titles">Contacto</h4>
               <ul className="list-items">
                 <li className="phonenumber">
-                  <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 5555 5555
+                  <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
                 </li>
               </ul>
             </Col>
