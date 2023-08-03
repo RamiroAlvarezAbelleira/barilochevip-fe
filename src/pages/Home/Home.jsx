@@ -78,10 +78,14 @@ const Home = () => {
       <div className='conditions-container'>
         <Row className='custom-row'><h3 className='home-section-title'>Destinos recomendados.</h3></Row>
         <Row className="justify-content-center py-4 px-5 custom-row">
-          { 
-            destinations.map((item, i) => {
+          { loading ? <>
+            {destinations.map(() => {
+                return <SkeletonCard/>
+              })}</> : <>
+            {destinations.map((item, i) => {
               return <DestinationCard key={i} destination={item}/>
-            })
+            })}
+          </>
           }
         </Row>
       </div>
