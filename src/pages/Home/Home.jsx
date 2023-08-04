@@ -90,7 +90,7 @@ const Home = () => {
         </Row>
       </div>
       <div className='destinations-container d-flex align-items-center justify-content-center'>
-        <Row className='w-75'>
+        <Row className='conditions-row'>
           <h3 className='home-section-title'>Condiciones de renta.</h3>
           <p>El alquiler de los equipos es por días, y el cliente debe comprometerse a devolverlos en las mismas condiciones que me fueron entregados, caso contrario debera hacerse cargo de la reparación o reintegro del monto de su costo completo en el caso de que no se puedan reparar. 
             El uso de los equipos y la actividad que realice con ellos corre completamente bajo la responsabilidad del cliente. 

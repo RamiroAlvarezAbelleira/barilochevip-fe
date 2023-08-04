@@ -15,7 +15,7 @@ const Footer = () => {
             </Link>
           </Row>
           <Row className="instagram-container">
-            <Col span={6}>
+            <Col span={6} className="mobile-version-col">
               <h4 className="list-titles">Contacto</h4>
               <ul className="list-items">
                 <li className="phonenumber">
@@ -23,7 +23,7 @@ const Footer = () => {
                 </li>
               </ul>
             </Col>
-            <Col span={6} className="divider">
+            <Col span={6} className="divider mobile-version-col">
             <h4 className="list-titles">Links</h4>
             <ul className="list-items">
                 <li>
