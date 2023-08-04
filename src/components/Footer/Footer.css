@@ -88,5 +88,22 @@
 @media (max-width: 767px) {
     .phonenumber {
         font-size: 3.6vw !important;
+        width: fit-content !important;
+    }
+
+    .mobile-version-col {
+        padding: 0;
+    }
+
+    .mobile-version-col .list-items {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-version-col .list-items li {
+        width: 80%;
     }
 }

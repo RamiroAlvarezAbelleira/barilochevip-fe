@@ -15,15 +15,15 @@ const Footer = () => {
             </Link>
           </Row>
           <Row className="instagram-container">
-            <Col span={6}>
+            <Col span={6} className="mobile-version-col">
               <h4 className="list-titles">Contacto</h4>
               <ul className="list-items">
                 <li className="phonenumber">
-                  <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 5555 5555
+                  <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
                 </li>
               </ul>
             </Col>
-            <Col span={6} className="divider">
+            <Col span={6} className="divider mobile-version-col">
             <h4 className="list-titles">Links</h4>
             <ul className="list-items">
                 <li>

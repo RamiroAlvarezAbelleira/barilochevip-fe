@@ -7,10 +7,16 @@ import img9 from "../../assests/images/img-9.jpg"
 import img8 from "../../assests/images/img-8.jpg"
 import mountainDecor from "../../assests/images/mountain-decor.png"
 import mountainDecor1 from "../../assests/images/mountain-decor-1.png"
+import { Link } from "react-router-dom"
+import {IoChevronBack} from "react-icons/io5"
+
 const AboutUs = () => {
   return (
     <div className="contact-background background-fixed">
         <Container className="about-container">
+            <Row className="pb-0 pt-5 mobile-go-back-row d-flex justify-content-start align-items-center">
+                <Link to={'/'} className="back-arrow"><IoChevronBack /></Link>
+            </Row>
             <Row className="pt-5 top-bottom-row">
                 <Col>
                     <img src={mountainDecor1} alt="decor" className="w-100 pt-4"/>

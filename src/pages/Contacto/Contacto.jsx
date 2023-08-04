@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import instagramLogo from "../../assests/images/instagram-logo.png"
 import whatsappLogo from "../../assests/images/whatsapp-logo.png"
 import { Link } from "react-router-dom"
+import {IoChevronBack} from "react-icons/io5"
 import "./Contacto.css"
 
 const Contacto = () => {
@@ -10,6 +11,9 @@ const Contacto = () => {
         <h1 className="contact-title">Contactenos para realizar su consulta o reserva!</h1>
         <Container className="small-contact-page-container">
             <Row className="small-row-container">
+                <Row className="px-0 mobile-go-back-row d-flex justify-content-start align-items-center">
+                    <Link to={'/'} className="back-arrow"><IoChevronBack /></Link>
+                </Row>
                 <Row className="align-items-center">
                     <h1 className="small-contact-title">Contactenos para realizar su consulta o reserva!</h1>
                 </Row>
@@ -20,7 +24,7 @@ const Contacto = () => {
                 <Row>
                     <ul className="contact-list-items">
                         <li>
-                            <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 5555 5555
+                            <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
                         </li>
                         <li>
                             <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link contact-link">
@@ -45,7 +49,7 @@ const Contacto = () => {
                     <Row>
                         <ul className="contact-list-items">
                             <li>
-                                <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 5555 5555
+                                <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
                             </li>
                             <li>
                                 <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link contact-link">

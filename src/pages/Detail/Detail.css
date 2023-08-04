@@ -22,6 +22,30 @@
     top: 25px;
 }
 
+.mobile-go-back-row {
+    display: none !important; 
+    padding-bottom: 40px;
+}
+
+.back-arrow {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8vw;
+    padding: 1vw;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 3px solid rgb(194, 194, 194);
+    box-shadow: 0 0 30px -15px black;
+}
+
+.back-arrow svg {
+    position: relative;
+    left: -2px;
+    color: rgb(114, 114, 114) !important;
+}
+
 @media (max-width: 990px) {
     .detail-page-container {
         padding: 0;
@@ -53,5 +77,11 @@
     .equipment-details {
         width: 95vw;
         margin: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .mobile-go-back-row {
+        display:flex !important;
     }
 }

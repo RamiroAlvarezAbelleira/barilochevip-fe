@@ -1,10 +1,10 @@
 .equipment-card {
     border: none;
     border-radius: 1rem;
-    transition: all 0.6s;
+    transition: all 0.3s;
 }
 
-.equipment-card:hover {
+.equipment-card.show {
     box-shadow: 0 0 30px -15px black;
 }
 
@@ -24,4 +24,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+
+@media (max-width: 990px) {
+    .appear-on-hover {
+        opacity: 1;
+        left: 0;
+    }
 }
