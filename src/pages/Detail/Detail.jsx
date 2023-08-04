@@ -7,6 +7,7 @@ import instagramLogo from "../../assests/images/instagram-logo.png"
 import whatsappLogo from "../../assests/images/whatsapp-logo.png"
 import axios from "../../api/axios"
 import arrangeEquipmentImages from "../../helpers/arrangeEquipmentImages"
+import {IoChevronBack} from "react-icons/io5"
 
 const Detail = () => {
     const {id} = useParams()
@@ -28,6 +29,9 @@ const Detail = () => {
   return (
     <div className="detail-page-container">
         <Container className="container-custom-style custom-border-radius p-5">
+            <Row className="mobile-go-back-row d-flex justify-content-start align-items-center">
+                <Link to={'/'} className="back-arrow"><IoChevronBack /></Link>
+            </Row>
             <Row className="detail-main-row">
                 <Col className="image-calendar-col">
                     <Row className="image-container">
