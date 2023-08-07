@@ -18,9 +18,11 @@ const Footer = () => {
             <Col span={6} className="mobile-version-col">
               <h4 className="list-titles">Contacto</h4>
               <ul className="list-items">
-                <li className="phonenumber">
-                  <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
-                </li>
+                <Link to='https://wa.link/v9yf7c' className="text-decoration-none">
+                  <li className="phonenumber">
+                    <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
+                  </li>
+                </Link>
               </ul>
             </Col>
             <Col span={6} className="divider mobile-version-col">
