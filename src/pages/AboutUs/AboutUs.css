@@ -33,6 +33,10 @@
     padding: 0;
 }
 
+.flex-center-col p {
+    text-align: justify;
+}
+
 .border-left {
     border-left: 1px solid rgb(210, 210, 210);
     padding-left: 15px;
@@ -108,9 +112,11 @@
     }
 
     .border-left {
-        padding-left: 1vw;
+        padding-left: 3vw;
+        padding-right: 1vw;
     }
     .border-right {
-        padding-right: 1vw;
+        padding-right: 3vw;
+        padding-left: 1vw;
     }
 }

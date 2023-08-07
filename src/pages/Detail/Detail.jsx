@@ -91,7 +91,10 @@ const Detail = () => {
                         { done ?
                             <ul className="contact-list-items">
                                 <li>
-                                    <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
+                                    <Link to='https://wa.link/v9yf7c' className="instagram-link contact-link">
+                                        <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
+                                    </Link>
+                                    
                                 </li>
                                 <li>
                                     <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link contact-link">

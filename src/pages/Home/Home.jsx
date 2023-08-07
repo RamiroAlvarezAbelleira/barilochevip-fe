@@ -64,8 +64,8 @@ const Home = () => {
           <Row className='custom-row'><h1 className='text-start m-5 w-100 home-title home-section-title'>Nuestros equipos.</h1></Row>
           <Row className="justify-content-center py-4 px-5 custom-row">
             { loading ? <>
-              {skeletons.map(() => {
-                  return <SkeletonCard/>
+              {skeletons.map((item) => {
+                  return <SkeletonCard key={item}/>
                 })}</> : <>
               {items.map((item, i) => {
                 return <EquipmentCard key={i} item={item}/>
@@ -79,8 +79,8 @@ const Home = () => {
         <Row className='custom-row'><h3 className='home-section-title'>Destinos recomendados.</h3></Row>
         <Row className="justify-content-center py-4 px-5 custom-row">
           { loading ? <>
-            {destinations.map(() => {
-                return <SkeletonCard/>
+            {destinations.map((item) => {
+                return <SkeletonCard key={item.id}/>
               })}</> : <>
             {destinations.map((item, i) => {
               return <DestinationCard key={i} destination={item}/>
@@ -92,10 +92,14 @@ const Home = () => {
       <div className='destinations-container d-flex align-items-center justify-content-center'>
         <Row className='conditions-row'>
           <h3 className='home-section-title'>Condiciones de renta.</h3>
-          <p>El alquiler de los equipos es por días, y el cliente debe comprometerse a devolverlos en las mismas condiciones que me fueron entregados, caso contrario debera hacerse cargo de la reparación o reintegro del monto de su costo completo en el caso de que no se puedan reparar. 
-            El uso de los equipos y la actividad que realice con ellos corre completamente bajo la responsabilidad del cliente. 
-            El cliente debe comprometerse a devolver el equipo en el tiempo y forma pactadas, caso contrario debera abonar el recargo correspondiente por cada día de retraso. 
-            Para concretar el alquiler debera entregar su DNI (actualizado), licencia de conducir o monto en efectivo equivalente al valor del equipo alquilado como garantía de que el equipo será devuelto.
+          <p>
+            El alquiler de los equipos es por días, y el cliente debe comprometerse a devolverlos en las mismas condiciones en que fueron entregados. 
+            De lo contrario, deberá hacerse cargo de la reparación o reintegro del monto completo de su costo en caso de que no puedan ser reparados.
+            El uso de los equipos y las actividades realizadas con ellos son completamente responsabilidad del cliente.
+            El usuario también se compromete a devolver el equipo en el tiempo y la forma acordados. 
+            En caso contrario, deberá abonar un recargo correspondiente por cada día de retraso.
+            Para finalizar el proceso de alquiler, será necesario entregar su DNI actualizado, licencia de conducir o el monto en efectivo equivalente al valor del equipo alquilado. 
+            Esta entrega servirá como garantía de que el equipo será devuelto en las condiciones acordadas.
           </p>
         </Row>
       </div>
