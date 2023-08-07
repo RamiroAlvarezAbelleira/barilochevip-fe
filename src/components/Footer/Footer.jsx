@@ -9,9 +9,12 @@ const Footer = () => {
     <footer className="sticky-footer bg-black footer-container">
         <Container className="text-white footer-container">
           <h3 className="text-center pt-3 mb-0">Redes sociales</h3>
-          <Row className="instagram-container">
+          <Row className="instagram-container justify-content-center">
             <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link">
               <img src={instagramLogo} className="instagram-logo" alt="instagram"/>
+            </Link>
+            <Link to='https://wa.link/v9yf7c' className="instagram-link">
+              <img src={whatsappLogo} className="wapp-social-networks" alt="whatsapp"/>
             </Link>
           </Row>
           <Row className="instagram-container">
@@ -21,6 +24,11 @@ const Footer = () => {
                 <Link to='https://wa.link/v9yf7c' className="text-decoration-none">
                   <li className="phonenumber">
                     <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
+                  </li>
+                </Link>
+                <Link to='https://www.instagram.com/ignacioarresesom/' className="text-decoration-none text-center">
+                  <li className="phonenumber">
+                    <img src={instagramLogo} className="instagram-logo-contacto" alt="instagram"/> @ignacioarresesom
                   </li>
                 </Link>
               </ul>

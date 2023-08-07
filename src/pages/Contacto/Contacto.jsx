@@ -21,21 +21,13 @@ const Contacto = () => {
                     <h3 className="fs-2 pb-3 pt-5 custom-font">Nuestras redes</h3>
                     <p className="fs-4 p-0">En la brevedad estaremos respondiendo su consulta</p>
                 </Row>
-                <Row>
-                    <ul className="contact-list-items">
-                        <li>
-                            <Link to='https://wa.link/v9yf7c' className="instagram-link contact-link">
-                                <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link contact-link">
-                                <Row className="instagram-logo-container">
-                                    <Col className="instagram-logo-col"><img src={instagramLogo} className="instagram-logo-contacto" alt="instagram"/></Col> <Col className="p-0  text-dark">@ignacioarresesom</Col>
-                                </Row>
-                            </Link> 
-                        </li>
-                    </ul>
+                <Row className="instagram-container justify-content-center border-0">
+                    <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link">
+                    <img src={instagramLogo} className="instagram-logo" alt="instagram"/>
+                    </Link>
+                    <Link to='https://wa.link/v9yf7c' className="instagram-link">
+                    <img src={whatsappLogo} className="wapp-social-networks" alt="whatsapp"/>
+                    </Link>
                 </Row>
             </Row>
         </Container>
@@ -51,12 +43,12 @@ const Contacto = () => {
                     <Row>
                         <ul className="contact-list-items">
                             <li>
-                                <Link to='https://wa.link/v9yf7c' className="instagram-link contact-link">
+                                <Link to='https://wa.link/v9yf7c' className="instagram-link contact-link m-auto">
                                     <img src={whatsappLogo} className="whatsapp-logo" alt="whatsapp"/> +54 9 11 6902 7644
                                 </Link>
                             </li>
                             <li>
-                                <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link contact-link">
+                                <Link to='https://www.instagram.com/ignacioarresesom/' className="instagram-link contact-link m-auto">
                                     <Row className="instagram-logo-container">
                                         <Col className="instagram-logo-col"><img src={instagramLogo} className="instagram-logo-contacto" alt="instagram"/></Col> <Col className="p-0">@ignacioarresesom</Col>
                                     </Row>

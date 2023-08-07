@@ -15,9 +15,24 @@
     background-color: white;
     padding: 0;
     border-radius: 21px;
-    margin: 0 auto;
+    margin: 0;
     margin-top: 2rem;
     transition: all 0.3s;
+}
+
+.wapp-social-networks {
+    position: relative;
+    left: 10px;
+    width: 80px;
+    padding: 0;
+    border-radius: 21px;
+    margin: 0;
+    margin-top: 22px;
+    transition: all 0.3s;
+}
+
+.wapp-social-networks:hover {
+    filter: drop-shadow(0px 0px 15px rgb(255 255 255 / 1));
 }
 
 .whatsapp-logo {
@@ -60,7 +75,7 @@
 
 .instagram-link {
     width: fit-content;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .divider {
@@ -76,7 +91,6 @@
 
     .instagram-container {
         margin: 0;
-        margin-top: 2rem;
         min-width: 100vw;
     }
 
